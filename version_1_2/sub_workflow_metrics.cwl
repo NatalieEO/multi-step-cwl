@@ -1,10 +1,7 @@
 ###############################################################################################
-# Exercise3 Example Solution
-# this workflow will align reads from a fastq file and print statistics for a SAM
+# This workflow will align reads from a fastq file and print statistics for a SAM
 # file to another file
 
-# launch locally with Dockstore CLI:
-#   dockstore workflow launch --local-entry align_and_metrics.cwl --json align_and_metrics.json
 ###############################################################################################
 #
 cwlVersion: v1.2
@@ -42,8 +39,6 @@ inputs:
 
 # The outputs section describes the outputs of the workflow. This is a list of output
 # parameters where each parameter consists of an identifier and a data type.
-# There are two outputs from this workflow, both are files, and one output called
-# 'output_sam' is a file that is produced byt he bwa_align step.
 outputs:
   output_metrics:
     type: File
@@ -58,8 +53,6 @@ requirements:
 # Workflow steps are not necessarily run in the order they are listed, instead
 # the order is determined by the dependencies between steps (using source). In
 # addition, workflow steps which do not depend on one another may run in parallel.
-# The first step runs a CWL tool described in align.cwl and produces an
-# output called 'output_sam'
 steps:
   flagstat:
     run:

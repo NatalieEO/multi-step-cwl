@@ -1,10 +1,9 @@
 ###############################################################################################
-# Exercise3 Example Solution
-# this workflow will align reads from a fastq file and print statistics for a SAM
+# This workflow will align reads from a fastq file and print statistics for a SAM
 # file to another file
 
 # launch locally with Dockstore CLI:
-#   dockstore workflow launch --local-entry align_and_metrics.cwl --json align_and_metrics.json
+#   dockstore workflow launch --local-entry uber_workflow_align_and_metrics.cwl --json uber_workflow_align_and_metrics.json
 ###############################################################################################
 #
 cwlVersion: v1.2
@@ -57,22 +56,6 @@ inputs:
 # There are two outputs from this workflow, both are files, and one output called
 # 'output_sam' is a file that is produced byt he bwa_align step.
 outputs:
-#  output_sam:
-#    type:
-#      type: array
-#      items:
-#         type: array
-#         items: File
-#    outputSource: subworkflow_align_and_metrics/output_sam
-#
-#  output_metrics:
-#    type:
-#      type: array
-#      items:
-#         type: array
-#         items: File
-#    outputSource: subworkflow_align_and_metrics/output_metrics
-#
   output_sam:
     type: File[]
     outputSource: subworkflow_align_and_metrics/output_sam
@@ -89,8 +72,6 @@ requirements:
 # Workflow steps are not necessarily run in the order they are listed, instead
 # the order is determined by the dependencies between steps (using source). In
 # addition, workflow steps which do not depend on one another may run in parallel.
-# The first step runs a CWL tool described in align.cwl and produces an
-# output called 'output_sam'
 steps:
 #  quality_check_not_defined_yet:
 #    run:
