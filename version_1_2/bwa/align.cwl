@@ -14,7 +14,7 @@
 class: CommandLineTool
 id: align_tool
 label: align tool
-cwlVersion: v1.1
+cwlVersion: v1.2
 doc: A workflow that aligns a pair of fasta files
 
 $namespaces:

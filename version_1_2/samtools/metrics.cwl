@@ -12,7 +12,7 @@
 class: CommandLineTool
 id: metrics_tool
 label: metrics tool
-cwlVersion: v1.1
+cwlVersion: v1.2
 doc: A tool that provides statistics for a SAM file
 
 $namespaces:
