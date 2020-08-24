@@ -2,8 +2,7 @@
 
 
 ###############################################################################################
-# Exercise3 Example Solution
-# this tool will write statisics for an input (SAM) file to an output file
+# This tool will write statisics for an input (SAM) file to an output file
 
 # launch locally with Dockstore CLI:
 #   dockstore tool launch --local-entry metrics.cwl --json metrics.json

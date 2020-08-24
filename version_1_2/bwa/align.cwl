@@ -1,8 +1,7 @@
 #!/usr/bin/env cwl-runner
 
 ###############################################################################################
-# Exercise3 Example Solution
-# this tool will use BWA to align reads from a fastq file
+# This tool will use BWA to align reads from a fastq file
 
 # launch locally with Dockstore CLI:
 #   dockstore tool launch --local-entry align.cwl --json align.json
