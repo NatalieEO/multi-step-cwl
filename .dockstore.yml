@@ -1,0 +1,6 @@
+version: 1.2
+workflows:
+   - subclass: CWL
+     primaryDescriptorPath: /version_1_2/uber_workflow_align_and_metrics.cwl
+     testParameterFiles:
+     - /version_1_2/uber_workflow_align_and_metrics.json
