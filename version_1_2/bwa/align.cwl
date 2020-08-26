@@ -25,7 +25,7 @@ dct:creator:
   foaf:name: Walter Shands
   foaf:mbox: jshands@ucsc.edu
 
-intent: Alignment
+intent: [Alignment]
 
 # We list our requirements for the docker container in DockerRequirements. The
 # dockerPull: parameter takes the same value that you would pass to a docker pull
