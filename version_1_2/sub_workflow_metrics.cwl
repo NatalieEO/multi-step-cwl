@@ -55,31 +55,7 @@ requirements:
 # addition, workflow steps which do not depend on one another may run in parallel.
 steps:
   flagstat:
-    run:
-      class: CommandLineTool
-      requirements:
-        DockerRequirement:
-          dockerPull: "quay.io/ldcabansay/samtools:latest"
-        ResourceRequirement:
-          coresMin: 1
-          ramMin: 1024
-          outdirMin: 100000
-
-      inputs:
-        input_sam:
-          type: File
-          inputBinding:
-            position: 1
-          doc: SAM file to analyze.
-
-      stdout: $(inputs.input_sam.nameroot).metrics
-      outputs:
-        metrics:
-          type: stdout
-          doc: Metrics on the input SAM file.
-
-      baseCommand: [samtools, flagstat]
-
+    run: {"$import": "samtools/metrics.cwl"}
     in:
       input_sam: input_sam
     out: [metrics]
