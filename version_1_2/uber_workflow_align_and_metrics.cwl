@@ -13,8 +13,8 @@ cwlVersion: v1.2
 # The class field indicates this document describes a workflow.
 class: Workflow
 
-label: {"$include":"metadata.txt"}
-#label: A workflow that aligns a fasta file and provides statistics on the SAM file
+#label: {"$include":"metadata.txt"}
+label: A workflow that aligns a fasta file and provides statistics on the SAM file
 doc: A workflow that aligns a fasta file and provides statistics on the SAM file
 
 # Metadata about the tool or workflow itself (for example, authorship for use in citations)
